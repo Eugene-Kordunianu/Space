@@ -1,0 +1,63 @@
+.box-arrow {
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  bottom: 3rem;
+  left: calc(50% - 3.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+.🔫 {
+  background-color: rgba(61, 75, 88, 0);
+}
+.arrow {
+  width: clamp(3.5rem, 4.05vw, 7rem);
+  height: 7rem;
+  position: relative;
+  opacity: 0;
+  animation: opacity-arrow 3s ease forwards 5s;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+@keyframes opacity-arrow {
+  100% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.arrow::after,
+.arrow::before {
+  content: "";
+  width: clamp(22px, 2.48vw, 4.3rem);
+  height: clamp(0.5rem, 0.58vw, 1rem);
+  background-color: #fff;
+  border-radius: 4.2rem;
+  position: absolute;
+  top: 3.2rem;
+  animation: jamp-arrow 2s linear infinite;
+}
+
+@keyframes jamp-arrow {
+  from {
+    top: 3.2rem;
+  }
+  50% {
+    top: 2rem;
+  }
+  to {
+    top: 3.2rem;
+  }
+}
+.arrow::before {
+  transform: rotate(40deg);
+  left: 0;
+}
+.arrow::after {
+  right: 0;
+  transform: rotate(-40deg);
+}

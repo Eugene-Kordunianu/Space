@@ -1,0 +1,51 @@
+.frame1__image {
+  width: clamp(26rem, 54.083333vw, 90rem);
+  position: absolute;
+  right: 25%;
+  top: 12%;
+  transform: scale(0.2);
+  z-index: 3;
+  transition: all 1s ease;
+  animation: planet 3s ease 1 forwards 3s;
+  will-change: transform;
+}
+
+@keyframes planet {
+  100% {
+    transform: scale(1);
+    right: -8rem;
+    top: 3.5rem;
+  }
+}
+.frame1__image._planetDown {
+  animation: planetDown 5s ease forwards;
+}
+.frame1__image._planetUp {
+  animation: planetUp 5s ease forwards;
+}
+
+@keyframes planetDown {
+  0% {
+    transform: scale(1);
+    top: 3.5rem;
+    right: -8rem;
+  }
+  100% {
+    transform: scale(1);
+    top: 60vh;
+    right: -16rem;
+    transition: all 2s ease;
+  }
+}
+@keyframes planetUp {
+  0% {
+    transform: scale(1);
+    top: 60vh;
+    right: -16rem;
+  }
+  100% {
+    transform: scale(1);
+    top: 3.5rem;
+    right: -8rem;
+  }
+}

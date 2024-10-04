@@ -1,0 +1,38 @@
+.frame1 {
+  /* position: relative; */
+}
+.box-frame1 {
+  position: relative;
+  width: 100%;
+  /* max-width: 1728px; */
+  /* margin: 0 auto; */
+  display: flex;
+  /* flex: 1 1 auto; */
+  justify-content: space-between;
+  align-items: center;
+  /* Зберігає тривимірний вигляд */
+}
+.frame1__content {
+  line-height: 85%;
+  margin-left: clamp(0rem, 9.259259vw, 16rem);
+  font-size: clamp(3.3rem, 5.555556vw, 9.6rem);
+  max-width: clamp(17rem, 28.935185vw, 50rem);
+  background-image: linear-gradient(#dadada 33.67%, rgba(218, 218, 218, 20%));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  z-index: 2;
+  transform: translateX(100vw);
+  transition: transform 0.8s ease;
+  animation: move-text 3s ease 1 forwards 3s;
+
+  @media (max-width: 400px) {
+    margin-left: 0;
+  }
+}
+@keyframes move-text {
+  100% {
+    transform: translateX(0%);
+  }
+}

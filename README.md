@@ -1,70 +1,255 @@
-# Getting Started with Create React App
+<a id='top'></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Проєкт Space
 
-## Available Scripts
+> Цей проєкт представляє собою веб-додаток для відображення інформації про космос з інтерактивними анімаціями. Основною метою є реалізація наступних анімацій:
 
-In the project directory, you can run:
+- Поява планети на сторінці
+- Опускання та піднімання планети залежно від прокручування
+- Плавна поява тексту
+- Анімація появи стрілки навігації
+- Анімація появи навігаційного меню в Header
+- Анімація при прокручуванні до конкретних блоків контенту
+- Ефект світіня зірок
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Технології
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> **React :** Бібліотека для побудови користувацьких інтерфейсів.
 
-### `npm test`
+> **useState: :** Хук React для створення та управління станом компонентів.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> **useContext:** Є частиною Context API у React. Context API використовується для передачі даних через дерево компонентів без потреби прокидати пропси на кожному рівні.
 
-### `npm run build`
+> **useEffect:** дозволяє синхронізувати компонент із зовнішніми джерелами даних або станами
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> **JSX:** Розширення синтаксису для JavaScript, яке дозволяє писати структуру компонентів, схожу на HTML, всередині JavaScript.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> **CSS:** Для стилізації компонентів.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> **JavaScript (ES6+):** Мова програмування, що використовує сучасні фічі, такі як стрілкові функції, деструктуризація, шаблонні рядки тощо.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Використані бібліотеки та інструменти:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> **classnames:** Бібліотека, яка дозволяє динамічно додавати CSS-класи в залежності від умов, спрощуючи керування класами в React та JavaScript.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+> **Webpack:** Для збірки проєкту.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> **ESLint:** Інструмент для перевірки коду на наявність помилок і дотримання стилю коду в JavaScript та React.
 
-## Learn More
+> **Prettier:** Інструмент для автоматичного форматування коду, який допомагає підтримувати єдиний стиль у проєкті.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Інструкції з встановлення
 
-### Code Splitting
+### 1. Клонування репозиторію `git clone [URL репозиторію]`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 2. Встановлення залежностей `npm install`
 
-### Analyzing the Bundle Size
+### 3. Запуск проєкту: `npm start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 4. Інструкції з розгортання:
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+> ## [Структура проєкту](#strukture)
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Опис директорій і файлів:
 
-### Deployment
+> **src/:** Основна папка з вихідним кодом.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+> **components/:** Компоненти React.
 
-### `npm run build` fails to minify
+> **hooks/:** Кастомні хуки.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> **assets/:** Статичні файли, такі як зображення і стилі.
+
+> **context/:** Контекст для глобального стану.
+
+> **App.js:** Основний компонент додатку.
+
+---
+
+## Опис головних компонентів:
+
+> **App:** Основний компонент, що обгортає **Header, Main i Footer**.
+
+> **Header:** Компонент з навігаційними посиланнями.
+>
+> > **HeaderLink:** Самі навігаційні посилання винесині в окремий компонент
+> > **BurgerMenu:** Бургер меню для зручної навігації на смартфонах
+
+> **Main:** Основний компонент контенту, що включає **Frame1 та Frame2**.
+
+> **Frame1:** Секція з анімацією планети, тексту та стрілкою для навігації.
+>
+> > **Arrow:** Стрілка навігації яка прокручує до потрібног компоненту
+> > **PlanetImage:** GIF планети яке маєє три стани в залежності від них вона зміщюється
+
+> **Frame2:** Секція з зображенням та текстовим який анімується при додавані класу за допомогою **useAnimationOnScroll**
+
+> **useAnimationOnScroll:** додає або видаляє клас \_active до елементів під час скролу, залежно від їх видимості у вікні браузера. Він використовує useContext для доступу до посилання на елементи з контексту і useEffect для відстеження події прокрутки. На основі положення елемента відносно вікна він активує або деактивує анімацію.
+
+> **useScrollLogic** відслідковує позицію прокрутки сторінки та змінює стан через setIsPlanetDown із класами \_planetDown або \_planetUp. Він використовує контекст Context та useEffect для додавання і видалення обробника події прокрутки.
+
+---
+
+<a id='strukture'></a>
+
+## Структура проєкту
+
+> Назви папок написані з маленької літери
+
+> Назви компонентів написані з великої літери + розширення **.JSX**
+
+> Стилі для кожного компонента з розширенням **.CSS**
+
+:warning: **Попередження:** `index.js` - зазвичай додають для підтримки великих додатків в даній ситуації це лиш практика;
+
+> **index.js -** Для чого він?
+>
+> **_Файл index.js використовується для спрощення імпорту компонентів. Він дозволяє скоротити шлях до компонента і зробити код більш читабельним._**
+
+#### Приклад:
+
+**1. Компонент** `Arrow.jsx`
+
+```javascript
+const Arrow = () => {
+  return <h1>Arrow Component</h1>;
+};
+
+export default Arrow;
+```
+
+**2. Файл** `index.js`
+
+```javascript
+export { default } from "./Arrow.jsx";
+```
+
+**3. Імпорт компонента** `index.js`
+
+```javascript
+import Arrow from "./components/arrow";
+```
+
+> **_Замість повного шляху до Arrow.jsx, можна імпортувати компонент з папки, де є index.js._**
+
+<br>
+
+> :warning: **Попередження:** Не забувайте прописувати **export default** у самому компоненті.
+
+```javascript
+export default Arrow;
+```
+
+> Цей експорт робить компонент доступним для імпорту з інших файлів.
+> А файл **index.js** реекспортує його:
+
+```javascript
+export { default } from "./Arrow.jsx";
+```
+
+> Таким чином, ми маємо два рівні `експорти`:
+> **_1. У компоненті (Arrow.jsx) — для визначення, що саме експортується._**  
+>  **_2. У index.js — для зручного реекспорту, щоб скоротити шлях імпорту._**
+
+### Підсумок:
+
+> - В **Arrow.jsx** обов'язково має бути **_export default_**, щоб зробити компонент доступним.
+> - В **index.js** ми реекспортуємо цей компонент для зручності.
+>
+> **_Тому це два окремі, але взаємопов'язані процеси._**
+
+```
+//Коротко як читати структуру
+
++---arrow  ---------------// Назва папки компонента arrow
+|   |      arrow.css  ----// Стилі для Arrow компонетна
+|   |      Arrow.jsx  ----// Назва компонента відповідно до назви папки
+|   |      index.js  -----// Реекспор компонента
+```
+
+```
+\src
+|   index.js
+|
++---assets
+|   +---gif
+|   |       space.gif
+|   |
+|   \---img
+|           Rectangle.jpg
+|           stars.png
+|           twinkling.png
+|
++---components
+|   +---app
+|   |       app.css
+|   |       App.jsx
+|   |       index.js
+|   |
+|   +---arrow
+|   |       arrow.css
+|   |       Arrow.jsx
+|   |       index.js
+|   |
+|   +---context
+|   |       context.js
+|   |
+|   +---footer
+|   |       footer.css
+|   |       Footer.jsx
+|   |       index.js
+|   |
+|   +---header
+|   |   |   header.css
+|   |   |   Header.jsx
+|   |   |   index.js
+|   |   |
+|   |   +---burgerMenu
+|   |   |       burgerMenu.css
+|   |   |       BurgerMenu.jsx
+|   |   |       index.js
+|   |   |
+|   |   \---headerLink
+|   |           headerLink.css
+|   |           HeaderLink.jsx
+|   |           index.js
+|   |
+|   +---main
+|   |       index.js
+|   |       Main.jsx
+|   |
+|   \---planetImage
+|           index.js
+|           planetImage.css
+|           PlanetImage.jsx
+|
++---frame
+|   +---frame1
+|   |       frame1.css
+|   |       Frame1.jsx
+|   |       index.js
+|   |
+|   \---frame2
+|           frame2.css
+|           Frame2.jsx
+|           index.js
+|
+\---hooks
+        useAnimationOnScroll.jsx
+        useScrollLogic.jsx
+
+```
+
+> Якщо ти вже тут та в тебе виникли якісь питання або пропозиції пиши мені [Linkedin](https://www.linkedin.com/in/eugene-kordunianu-b8987328b/)
+
+#### [Top: 0; &uarr;](#top)
