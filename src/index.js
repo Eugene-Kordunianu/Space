@@ -5,7 +5,7 @@ import App from "./components/app";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
-//?tree /F /A "E:\IT\HW_React\home-work-3-space\src" > structure.txt вивід структури дерева
+//? tree /F /A "E:\IT\HW_React\home-work-3-space\src" > structure.txt вивід структури дерева
 /* 
 !!/F:
 Виводить усі файли разом із папками. За замовчуванням команда tree виводить лише директорії. Цей параметр додає також файли в кожній директорії.

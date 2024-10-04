@@ -5,6 +5,12 @@
 /.pnp
 .pnp.js
 
+# IDE configuration
+.vscode
+
+# Firebase
+.firebase
+
 # testing
 /coverage
 

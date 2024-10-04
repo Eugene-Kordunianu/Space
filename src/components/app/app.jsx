@@ -1,9 +1,9 @@
 import { StrictMode } from "react";
 
 import { ContextProvider } from "../context/context.js";
-import Footer from "../footer";
-import Header from "../header";
-import Main from "../main";
+import Footer from "../footer/index.js";
+import Header from "../header/index.js";
+import Main from "../main/index.js";
 import "./app.css";
 const App = () => {
   return (
@@ -16,4 +16,5 @@ const App = () => {
     </StrictMode>
   );
 };
+
 export default App;
