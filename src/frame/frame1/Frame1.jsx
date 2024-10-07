@@ -1,6 +1,5 @@
 import Arrow from "../../components/arrow";
 import PlanetImage from "../../components/planetImage";
-
 import "./frame1.css";
 export default function Frame1() {
   return (
